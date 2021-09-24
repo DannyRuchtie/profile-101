@@ -6,11 +6,14 @@ import App from './App'
 ReactDOM.render(
   <>
 
+
+
     <div className="grid">
     <header>
         <div>
           <a to="/">Design & Technology</a>
         </div>
+
 
     </header>
       <div className="page">
@@ -33,7 +36,10 @@ ReactDOM.render(
     
     </div>
     
-        <App />
+    
+        <App/>
+    
+    
   </>,
   document.getElementById('root')
 )

@@ -4,7 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Instances, Instance, Environment, ContactShadows } from '@react-three/drei'
 import { EffectComposer, SSAO } from '@react-three/postprocessing'
 
-const particles = Array.from({ length: 100 }, () => ({
+const particles = Array.from({ length: 60 }, () => ({
   factor: MathUtils.randInt(20, 100),
   speed: MathUtils.randFloat(0.01, 1),
   xFactor: MathUtils.randFloatSpread(80),
@@ -14,23 +14,28 @@ const particles = Array.from({ length: 100 }, () => ({
 
 export default function App() {
   return (
-    <Canvas shadows dpr={[1, 2]} gl={{ alpha: false, antialias: false }} camera={{ fov: 75, position: [0, 0, 60], near: 10, far: 150 }}>
-      
-   <fog attach="fog" args={['AEAAA7', 10, 100]} /> 
+  
+<div className="canvasholder">
+    <Canvas shadows dpr={[1, 2]} gl={{ alpha: false, antialias: false }} camera={{ fov: 20, position: [0, 0, 60], near: 30, far: 150 }}>
+    <color attach="background" args={['#fff']} />
 
-
-      <pointLight position={[-100, -100, -100]} intensity={10} color="#AEAAA7" />
+      <pointLight position={[-100, -100, -100]} intensity={4} color="#fff" />
       <Bubbles />
-      
+          
 
       <ContactShadows rotation={[Math.PI / 2, 0, 0]} position={[0, -30, 0]} opacity={1} width={130} height={130} blur={1} far={40} />
       <EffectComposer multisampling={0}>
-       <SSAO samples={1} radius={0} intensity={1} luminanceInfluence={1} color="#121212" />
-     </EffectComposer>
+        <SSAO samples={2} radius={1} intensity={1} luminanceInfluence={0.1} color="fff" />
+
+      </EffectComposer>
      
- 
+       <Suspense fallback={null}>
+        <Environment preset="studio" />
+      </Suspense>
 
     </Canvas>
+    </div>
+ 
   )
 }
 
@@ -38,9 +43,9 @@ function Bubbles() {
   const ref = useRef()
   useFrame((state, delta) => void (ref.current.rotation.y = MathUtils.damp(ref.current.rotation.y, (-state.mouse.x * Math.PI) / 6, 0.75, delta)))
   return (
-    <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 10, 0]}>
-      <sphereBufferGeometry args={[1, 32, 32]} />
-      <meshStandardMaterial roughness={0} color="#AEAAA7" />
+    <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[1, 10, 0]}>
+      <sphereBufferGeometry args={[1, 24, 24]} />
+      <meshStandardMaterial roughness={1} color="#fff" />
       {particles.map((data, i) => (
         <Bubble key={i} {...data} />
       ))}

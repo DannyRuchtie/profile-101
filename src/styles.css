@@ -5,20 +5,17 @@
 	font-stretch: 25% 151%;
 }
 
-
 :root {
-  --main-bg-color: #000;
-  --main-fg-color: #D6D3D0;
+  --main-bg-color: #fff;
+  --main-fg-color: #C1C6CB;
+  --main-theme-color: #C1C6CB;
 }
-
 
 html,
 body,
 #root {
-
   background:var(--main-bg-color);
   color:var(--main-fg-color);
-
   margin: 0;
   padding: 0;
   top: 0;
@@ -32,6 +29,9 @@ body,
     font-weight:300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  animation-name: fade;
+  animation-duration: 8s;
 }
 
 
@@ -74,15 +74,13 @@ header  div{
 }
 
 
-
-
 .page{
-  color:var(--main-fg-color);
   display:grid;
   grid-template-columns:  1fr;
   width:100vw;
   height:100vh;
   border:1px solid rgba(255,255,255,0.1);
+
 }
 
 .content{
@@ -96,9 +94,10 @@ display:grid;
 h1{
 font-family: PPEditorialNew-Ultrabold;
   text-align:left;
-  font-size:11vw;
+  font-size:9vw;
   line-height:.9;
   letter-spacing: -0.01em;
+  color:var(--main-theme-color);  
 }
 
 
@@ -115,5 +114,27 @@ footer{
 footer  div{
   padding:2rem;
   text-align:right;
-  
+}
+
+
+@media (max-width: 768px){
+    h1{
+        text-align:center;
+        font-size:10vw;
+        line-height:1.1;
+        letter-spacing: -0.04em;
+      }
+}
+
+.canvasholder{
+height:100%;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 3s;
+}
+
+@keyframes fade {
+  0% {opacity:0; display:none;}
+  10% { display:block;}
+  100% {opacity:1;}
 }
