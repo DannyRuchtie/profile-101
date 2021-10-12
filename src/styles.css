@@ -52,6 +52,7 @@ body {
   top: 0;
   left: 0;
   z-index:2;
+
 }
 
 header{
@@ -63,14 +64,26 @@ header{
 }
 
 header  div{
-  padding:2rem;
+  padding:4em;
   flex:1;
+  text-align: left;
 }
 
- a{
+
+
+header .nav{
+  text-align: right;
+}
+
+header a,
+footer a{
   margin-left:1rem;
   text-decoration: none;
   color:var(--main-fg-color);
+}
+
+header .home{
+  margin-left:0rem;
 }
 
 
@@ -86,8 +99,7 @@ header  div{
 .content{
 display:grid;
  align-items: center;
-  justify-items: center;
-  padding:4rem;
+ padding:4rem;
 }
 
 
@@ -98,6 +110,31 @@ font-family: PPEditorialNew-Ultrabold;
   line-height:.9;
   letter-spacing: -0.01em;
   color:var(--main-theme-color);  
+}
+
+.homepage{
+  display:grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.workpage{
+  display: grid;
+  justify-items: left;
+
+}
+
+
+.workpage .cardHolder{
+  display: grid;
+  grid-template-columns: repeat(5, minmax( 200px,1fr ));
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-items: left;
+}
+.workpage h1{
+  font-size:4vw;
+  text-align:left;
 }
 
 
@@ -112,7 +149,7 @@ footer{
 }
 
 footer  div{
-  padding:2rem;
+  padding:4rem;
   text-align:right;
 }
 
@@ -127,7 +164,10 @@ footer  div{
 }
 
 .canvasholder{
-height:100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 1;
   animation-name: fade;
   animation-duration: 1s;
   animation-delay: 3s;

@@ -1,8 +1,18 @@
 import { MathUtils } from 'three'
 import { useRef, Suspense } from 'react'
+import { BrowserRouter, Route, NavLink } from "react-router-dom";
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Instances, Instance, Environment, ContactShadows } from '@react-three/drei'
 import { EffectComposer, SSAO } from '@react-three/postprocessing'
+
+
+
+import Home from "./home.js";
+import Work from "./work.js";
+import About from "./about.js";
+
+
+
 
 const particles = Array.from({ length: 60 }, () => ({
   factor: MathUtils.randInt(20, 100),
@@ -10,13 +20,16 @@ const particles = Array.from({ length: 60 }, () => ({
   xFactor: MathUtils.randFloatSpread(80),
   yFactor: MathUtils.randFloatSpread(40),
   zFactor: MathUtils.randFloatSpread(40)
+
+
 }))
 
 export default function App() {
   return (
-  
-<div className="canvasholder">
-    <Canvas shadows dpr={[1, 2]} gl={{ alpha: false, antialias: false }} camera={{ fov: 20, position: [0, 0, 60], near: 30, far: 150 }}>
+
+    <div>
+    <div className="canvasholder">
+    <Canvas shadows dpr={[1, 2]} gl={{ alpha: true, antialias: true }} camera={{ fov: 20, position: [0, 0, 60], near: 30, far: 150 }}>
     <color attach="background" args={['#fff']} />
 
       <pointLight position={[-100, -100, -100]} intensity={4} color="#fff" />
@@ -35,6 +48,65 @@ export default function App() {
 
     </Canvas>
     </div>
+
+<div className="grid">
+
+
+
+<BrowserRouter>
+
+
+
+
+
+    <header>
+        <div>
+          <NavLink className="home" to="/">Connecting the dots</NavLink>
+        </div>
+
+        <div className="nav"> 
+        <NavLink to="/work">Latest Work</NavLink>
+        <NavLink to="/about">About</NavLink>
+        </div>
+    </header>
+      <div className="page">
+      
+     
+
+        <div className="content">
+
+        <Route exact={true} path="/" component={Home} />
+        <Route exact={true} path="/work" component={Work} />
+        <Route path="/about" activeClassName="is-active" component={About} />
+
+    
+        </div>  
+
+
+
+    <footer>
+    <div>
+      <a target="_blank" href="http://codesandbox.io/u/dannyruchtie">csb</a>
+      <a target="_blank" href="https://twitter.com/DannyRuchtie">tw</a>
+      <a target="_blank" href="https://www.instagram.com/dannyruchtie/">ig</a>
+      <a target="_blank"href="https://vimeo.com/druchtie">vm</a>
+      <a target="_blank" href="https://www.linkedin.com/in/dannyruchtie/">li</a>
+      <a href="mailto:druchtie@gmail.com">mail</a> 
+      </div>
+    </footer>
+    
+
+
+    </div>
+
+
+    
+    
+    </BrowserRouter>
+    </div>
+
+
+   </div>
  
   )
 }
