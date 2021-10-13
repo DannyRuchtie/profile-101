@@ -130,7 +130,7 @@ h2{
 .workpage{
   display: grid;
   justify-items: left;
-  margin: 4rem 0;
+  margin: 4rem 0 6rem 0;
 }
 
 .canvasholder:hover{
@@ -139,8 +139,12 @@ h2{
   
 .workpage a{
   color:var(--main-fg-color);
+  font-weight: 600;
   text-decoration: none;
-  border-bottom:1px solid;
+}
+
+.workpage a:hover{
+    border-bottom:1px solid;
 }
 
 .card img{
