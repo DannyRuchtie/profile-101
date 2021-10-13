@@ -68,6 +68,7 @@ export default function App() {
         <div className="nav"> 
         <NavLink to="/work">Work</NavLink>
         <NavLink to="/about">About</NavLink>
+         <a href="mailto:druchtie@gmail.com">Contact</a> 
         </div>
     </header>
       <div className="page">
@@ -92,7 +93,7 @@ export default function App() {
       <a target="_blank" href="https://www.instagram.com/dannyruchtie/">ig</a>
       <a target="_blank"href="https://vimeo.com/druchtie">vm</a>
       <a target="_blank" href="https://www.linkedin.com/in/dannyruchtie/">li</a>
-      <a href="mailto:druchtie@gmail.com">mail</a> 
+     
       </div>
     </footer>
     

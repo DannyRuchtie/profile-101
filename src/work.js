@@ -16,20 +16,20 @@ function Work(props) {
 
     <div className="card">
       <h2>IBM iX</h2>
-      <p>As Studio lead,  I  the ambitions of IBM and iX design Studios Benelux. I was overseeing a team—Building best-in-class digital experience for some of the world's biggest brands. </p>
+      <p>As Studio lead,  I manged the ambitions of IBM and iX design Studios Benelux. I was overseeing a team—Building best-in-class digital experience for some of the world's biggest brands. </p>
       <a target="_blank" href="https://www.ibm.com/services/ibmix">Visit IBM</a>
     </div>
 
     <div className="card">
       <h2>Smart Ready to</h2>
-      <p>I worked with IBM, Daimler, and Computer Rock on the smart ready to platform and apps. Ready to plays a crucial part role in Smart's future vision. </p>
+      <p>I worked with IBM, Daimler, and Computer Rock on the smart ready to platform and mobile apps. Ready to plays a crucial role in Smart's future vision. </p>
       <a  target="_blank" href="https://future.smart.com/en/concept1.html?campid=intcmp_smartCom_IAA_headerNavigation_20210829">Download App</a>
     </div>
 
     <div className="card">
       <h2>Catawiki</h2>
       <p>Led the design of Catawiki's mobile platform. And worked on the Redesign of the main application catawiki.com</p>
-      <a target="_blank" href="https://www.catawiki.com/en/stories/5029-discover-treasures-with-the-catawiki-app">Download the apps</a>
+      <a target="_blank" href="https://www.catawiki.com/">Visit Catawiki</a>
     </div>
 
     <div className="card">
@@ -40,7 +40,7 @@ function Work(props) {
 
     <div className="card">
       <h2>Lifelines</h2>
-        <p>Designed and Developed the web application LifeLines, a data visualization for the LifeLines study. A study into heritability and the environment affect the health of a human being.  username: Lifelines psw: Maaktonderzoekmogelijk.</p>
+        <p>Designed and Developed the web application LifeLines, a data visualization for the LifeLines study. A study into heritability and the environmental affect the health of a human being.  username: Lifelines psw: Maaktonderzoekmogelijk.</p>
       <a target="_blank" href="https://inzicht.lifelines.nl/index.php">Explore the app</a>
     </div>
 
