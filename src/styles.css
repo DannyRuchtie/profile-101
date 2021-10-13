@@ -26,6 +26,7 @@ body,
   left: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -143,7 +144,7 @@ h2{
 
 
 .aboutpage{
-  padding:4rem 0yarn ;
+  padding:6rem 0 ;
   max-width: 100vw;
   display: grid;
   justify-self: center;
@@ -233,7 +234,7 @@ header .nav{
 
     h1{
         text-align:center;
-        font-size:10vw;
+        font-size:8vw;
         line-height:1.1;
         letter-spacing: -0.04em;
       }
