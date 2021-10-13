@@ -5,6 +5,8 @@
 	font-stretch: 25% 151%;
 }
 
+
+
 :root {
   --main-bg-color: #fff;
   --main-fg-color: #8a97a3;
@@ -26,7 +28,7 @@ body,
   left: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+
   
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -100,8 +102,6 @@ header .home{
   grid-template-columns:  1fr;
   width:100vw;
   height:100%;
-  border:1px solid rgba(255,255,255,0.1);
-
 }
 
 .content{
