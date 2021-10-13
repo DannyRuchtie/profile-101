@@ -83,6 +83,7 @@ footer a{
 
 header .home{
   margin-left:0rem;
+  font-weight: 500;
 }
 
 
@@ -117,7 +118,7 @@ font-family: PPEditorialNew-Ultrabold;
 
 h2{
   font-size:2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin:.5rem 0;
 }
 
@@ -139,7 +140,7 @@ h2{
   
 .workpage a{
   color:var(--main-fg-color);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
