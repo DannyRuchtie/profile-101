@@ -66,7 +66,7 @@ export default function App() {
         </div>
 
         <div className="nav"> 
-        <NavLink to="/work"><span className="hide">Notable</span> Work</NavLink>
+        <NavLink to="/work">Work</NavLink>
         <NavLink to="/about">About</NavLink>
         </div>
     </header>
