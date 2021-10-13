@@ -62,11 +62,11 @@ export default function App() {
     <header>
         <div>
           <NavLink className="home" to="/">
-           Design & Technology</NavLink>
+           Danny Ruchtie</NavLink>
         </div>
 
         <div className="nav"> 
-        <NavLink to="/work">Notable Work</NavLink>
+        <NavLink to="/work"><span className="hide">Notable</span> Work</NavLink>
         <NavLink to="/about">About</NavLink>
         </div>
     </header>
