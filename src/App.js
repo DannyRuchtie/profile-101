@@ -61,11 +61,12 @@ export default function App() {
 
     <header>
         <div>
-          <NavLink className="home" to="/">Connecting the dots</NavLink>
+          <NavLink className="home" to="/">
+           Design & Technology</NavLink>
         </div>
 
         <div className="nav"> 
-        <NavLink to="/work">Latest Work</NavLink>
+        <NavLink to="/work">Notable Work</NavLink>
         <NavLink to="/about">About</NavLink>
         </div>
     </header>
