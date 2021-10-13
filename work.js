@@ -5,7 +5,7 @@ function Work(props) {
 
     <div className="workpage">
 
-<h1>Notable work and contributions</h1>
+<h1>Notable work & contributions</h1>
 
 <div className="cardHolder">
     <div className="card">

@@ -34,7 +34,7 @@ function Work(props) {
 
     <div className="card">
       <h2>Albelli</h2>
-      <p>Led the design of  Albelli's is a mobile app.  With the Albelli photo book app for your smartphone, you can quickly and intuitively create your photo book. </p>
+      <p>Led the design of  Albelli's mobile app.  With the Albelli photo book app for your smartphone, you can quickly and intuitively create your photo book. </p>
       <a target="_blank" href="https://www.bonusprint.co.uk/apps">Download the apps</a>
     </div>
 

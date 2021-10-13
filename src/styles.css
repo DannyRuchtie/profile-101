@@ -118,7 +118,7 @@ b{
 h1{
 font-family: PPEditorialNew-Ultrabold;
   text-align:center;
-  font-size:10vw;
+  font-size:2.5rem;
   line-height:.9;
   letter-spacing: -0.01em;
 }
@@ -154,8 +154,8 @@ h2{
 
 
 .aboutpage p{
-    font-size: 1rem;
-    line-height:1.5rem;
+    font-size: 0.9rem;
+    line-height:1.2rem;
     margin-top:0;
     padding-top:0;
 }
@@ -190,7 +190,7 @@ h2{
   justify-items: left;
 }
 .workpage h1{
-  font-size:4vw;
+  font-size:2rem;
   text-align:left;
 }
 
@@ -230,11 +230,9 @@ header .nav{
 }
 
 
-
-
     h1{
         text-align:center;
-        font-size:8vw;
+        font-size:8rem;
         line-height:1.1;
         letter-spacing: -0.04em;
       }
@@ -252,8 +250,8 @@ header .nav{
       }
 
       .aboutpage p{
-    font-size: 1.2rem;
-    line-height:1.5rem;
+    font-size: 0,9rem;
+    line-height:1.2rem;
     margin-top:0;
     padding-top:0;
 }
