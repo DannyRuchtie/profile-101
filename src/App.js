@@ -93,7 +93,7 @@ export default function App() {
       <a target="_blank" href="https://www.instagram.com/dannyruchtie/">ig</a>
       <a target="_blank"href="https://vimeo.com/druchtie">vm</a>
       <a target="_blank" href="https://www.linkedin.com/in/dannyruchtie/">li</a>
-     
+           <a target="_blank" href="https://dannyruchtie.tumblr.com">tblr</a>
       </div>
     </footer>
     
