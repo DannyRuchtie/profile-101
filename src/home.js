@@ -5,7 +5,7 @@ function Home(props) {
 
     <div className="homepage">
 
-      <h1>Connecting dots</h1>
+      <h1>Danny Ruchtie</h1>
 
     </div>  
 

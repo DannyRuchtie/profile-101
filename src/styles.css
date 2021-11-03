@@ -5,15 +5,13 @@
 	font-stretch: 25% 151%;
 }
 
-
-
 :root {
   --main-bg-color: #fff;
   --main-fg-color: #8a97a3;
   --main-theme-color: #C1C6CB;
 }
 
-.hide{
+.homepage .home{
   display:none;
 }
 

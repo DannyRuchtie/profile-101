@@ -1,9 +1,6 @@
-import { MathUtils } from 'three'
 import { useRef, Suspense } from 'react'
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Instances, Instance, Environment, ContactShadows } from '@react-three/drei'
-import { EffectComposer, SSAO } from '@react-three/postprocessing'
+
 
 
 
@@ -13,40 +10,12 @@ import About from "./about.js";
 
 
 
-
-const particles = Array.from({ length: 60 }, () => ({
-  factor: MathUtils.randInt(20, 100),
-  speed: MathUtils.randFloat(0.01, 1),
-  xFactor: MathUtils.randFloatSpread(80),
-  yFactor: MathUtils.randFloatSpread(40),
-  zFactor: MathUtils.randFloatSpread(40)
-
-
-}))
-
 export default function App() {
   return (
 
     <div>
     <div className="canvasholder">
-    <Canvas shadows dpr={[1, 2]} gl={{ alpha: true, antialias: true }} camera={{ fov: 20, position: [0, 0, 60], near: 30, far: 150 }}>
-    <color attach="background" args={['#fff']} />
 
-      <pointLight position={[-100, -100, -100]} intensity={4} color="#fff" />
-      <Bubbles />
-          
-
-      <ContactShadows rotation={[Math.PI / 2, 0, 0]} position={[0, -30, 0]} opacity={1} width={130} height={130} blur={1} far={40} />
-      <EffectComposer multisampling={0}>
-        <SSAO samples={2} radius={1} intensity={1} luminanceInfluence={0.1} color="fff" />
-
-      </EffectComposer>
-     
-       <Suspense fallback={null}>
-        <Environment preset="studio" />
-      </Suspense>
-
-    </Canvas>
     </div>
 
 <div className="grid">
@@ -67,8 +36,8 @@ export default function App() {
 
         <div className="nav"> 
         <NavLink to="/work">Work</NavLink>
-        <NavLink to="/about">About</NavLink>
-         <a href="mailto:druchtie@gmail.com">Contact</a> 
+          <a target="_blank" href="https://read.cv/dannyruchtie">About</a>
+         <a target="_blank" href="mailto:druchtie@gmail.com">Contact</a> 
         </div>
     </header>
       <div className="page">
