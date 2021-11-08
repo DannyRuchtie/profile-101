@@ -6,14 +6,18 @@
 }
 
 :root {
-  --main-bg-color: #fff;
-  --main-fg-color: #8a97a3;
-  --main-theme-color: #C1C6CB;
+  --main-bg-color: #003918;
+  --main-fg-color: #FFDDAA;
+  --main-theme-color: #FFBA3E;
+  --main-tertiary-color: #FFBA3E;
+  
 }
 
-.homepage .home{
-  display:none;
+svg,
+.icon{
+  fill: var(--main-theme-color);
 }
+
 
 html,
 body,
@@ -36,7 +40,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
   
   animation-name: fade;
-  animation-duration: 8s;
+  animation-duration:2s;
 }
 
 
@@ -60,7 +64,7 @@ body {
 }
 
 header{
-  color:var(--main-fg-color);
+  color:var(--main-tertiary-color);
   width:100%;
   position:absolute;
   display:flex;
@@ -81,13 +85,18 @@ header  .nav{
 
 
 
-header a,
-footer a{
+a{
   width: 100%;
   margin:0 .5rem;
   text-decoration: none;
   color:var(--main-fg-color);
 }
+
+ a:hover
+{
+    color:var(--main-primairy-color);
+ }
+
 
 header .home{
   font-weight: 500;
@@ -115,15 +124,19 @@ b{
 
 h1{
 font-family: PPEditorialNew-Ultrabold;
+  color:var(--main-theme-color);
   text-align:center;
+  font-style:italic;
   font-size:1.5rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -themem;
+
 }
 
 
 h2{
+  color:var(--main-tertiary-color);
   font-size:1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   margin:.5rem 0;
 }
 
@@ -134,13 +147,13 @@ h2{
 }
 
 .homepage h1{
-  font-size: 2.4rem;
+  font-size: 5rem;
 }
 
 .workpage{
   display: grid;
   justify-items: left;
-  margin: 4rem 0 6rem 0;
+  margin: 2rem 0;
 }
 
 
@@ -196,7 +209,6 @@ h2{
 
 
 footer{
-  color:var(--main-fg-color);
   width:100%;
   position:absolute;
   display:flex;
@@ -263,14 +275,6 @@ footer{
     justify-content: flex-end;
 }
 
-header a,
-footer a{
-  margin:0 0 0 1rem;
-  text-decoration: none;
-  color:var(--main-fg-color);
-}
-
-
 
 }
 
@@ -286,7 +290,7 @@ footer a{
 
 
              .homepage h1{
-  font-size: 8rem;
+  font-size: 12rem;
 }
 }
 
